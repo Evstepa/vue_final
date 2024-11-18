@@ -1,10 +1,8 @@
 <template>
   <main class="main">
-
     <film-header 
       :currentFilm="randomFilm" @loadRandomFilm="loadRandomFilm()"
     />
-
     <div class="container content__container">
       <h2 class="title content__title">Топ 10 фильмов</h2>
 
@@ -56,10 +54,8 @@
   import { ref, computed } from 'vue';
   import { getFilms, getRandomFilm } from '@/api/films';
   import type { IFilm } from '@/types/film';
-
   import { Swiper, SwiperSlide } from "swiper/vue";  
-  import "swiper/swiper-bundle.min.css";  
-  import "swiper/swiper.min.css";  
+  import 'swiper/css';
 
   const films = ref<IFilm[]>([]);
   const loadFilms = async (): Promise<void> => {
@@ -114,20 +110,11 @@
 
   @media (max-width: 1280px) {
     .film-list {
-      /* box-shadow: 0 0 80px var(--color-shadow); */
       justify-content: center;
     }
   }
   
   @media (max-width: 1024px) {
-    /* .film-list {
-      background-color: transparent;
-    } */
-
-    /* .mySwiper {
-      background-color: transparent;
-    } */
-
     .swiper-slide {
       padding: 15px;
     }

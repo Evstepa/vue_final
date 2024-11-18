@@ -207,7 +207,7 @@
 
 <script setup lang="ts">
   import ModalWindowTemplate from './ModalWindowTemplate.vue';
-  import { computed, ref, watch } from 'vue';
+  import { computed, ref } from 'vue';
   import { useUserStore } from '@/stores/user';
   import { useFavoritesStore } from '@/stores/favorites';
   import { storeToRefs } from 'pinia';
@@ -290,9 +290,9 @@
   }
 
   const checkPassword = function() {
-    // const re = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
-    // user.value.password = re.test(password.value) ? password.value : '';
-    user.value.password = password.value;
+    const re = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/;
+    user.value.password = re.test(password.value) ? password.value : '';
+    // user.value.password = password.value;
   }
 
   const checkPasswordDouble = function() {

@@ -71,18 +71,13 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, watch } from 'vue';
+  import { ref } from 'vue';
   import { getFilmByName } from '@/api/films';
   import type { IFilm } from '@/types/film';
   import SearchCard from './SearchCard.vue';
 
   import { Swiper, SwiperSlide } from "swiper/vue";  
-  import "swiper/swiper-bundle.min.css";  
-  import "swiper/swiper.min.css";  
-
-  // import { useRoute } from 'vue-router';
-
-  // const route = useRoute();
+  import 'swiper/css';
 
   const $emit = defineEmits([
     'closeSearchModal',
@@ -201,10 +196,6 @@
       padding: 24px 20px;
     }
 
-    /* .search-slider {
-      
-    } */
   }
-
 
 </style>

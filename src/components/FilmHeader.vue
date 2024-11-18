@@ -60,7 +60,6 @@
       <div class="video-player">
 
         <div class="video-container">
-              <!--  v-show="videoStop"  v-show="showPause"-->
           <div class="modal__close flex" @click="closeMovie">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.9997 5.5865L11.9495 0.636719L13.3637 2.05093L8.4139 7.0007L13.3637 11.9504L11.9495 13.3646L6.9997 8.4149L2.04996 13.3646L0.635742 11.9504L5.5855 7.0007L0.635742 2.05093L2.04996 0.636719L6.9997 5.5865Z" fill="black" fill-opacity="0.5"/>
@@ -259,14 +258,10 @@
   }
 
   .wallpaper-img img {
-    /* height: 100%; */
     width: -webkit-fill-available;
   }
 
   .wallpaper__content {
-    /* position: relative; */
-    /* padding-top: 74px;
-    padding-bottom: 122px; */
     padding-top: 40px;
     padding-bottom: 40px;
     max-width: 600px;

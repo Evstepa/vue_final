@@ -68,7 +68,6 @@
     align-items: center;
     column-gap: var(--column-gap);
     row-gap: var(--row-gap);
-    /* max-width: 1440px; */
     margin-bottom: 64px;
     width: 100%;
   }

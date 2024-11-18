@@ -140,18 +140,12 @@
   import { useFavoritesStore } from '@/stores/favorites';
   import { storeToRefs } from 'pinia';
   import router from '@/router';
-
-  // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from "swiper/vue";  
-  // swiper bundle styles
-  import "swiper/swiper-bundle.min.css";  
-  // swiper core styles
-  import "swiper/swiper.min.css";  
+  import 'swiper/css';
 
   const activeTab = ref(1);
 
   const userStore = useUserStore();
-  const { isAuthorized } = storeToRefs(userStore);
   const { user } = storeToRefs(userStore);
 
   const favoritesStore = useFavoritesStore();
@@ -174,7 +168,7 @@
   }
 
   async function logoutCurrentUser() {
-    const result = await userStore.logout();
+    await userStore.logout();
     router.push('/');
   }
 
@@ -188,8 +182,6 @@
 
   watch(router.currentRoute, () => {
     favoritesStore.loadFavorites();
-    // if (isAuthorized.value) {
-    // }
   }, { deep: true});
 
 </script>

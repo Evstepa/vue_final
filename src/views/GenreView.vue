@@ -22,9 +22,6 @@
   import { ref } from 'vue';
   import { getGenres, getFilmByGenre } from '@/api/films';
   import type { IGenre } from '@/types/genre';
-  import { useRoute } from 'vue-router';
-
-  const route = useRoute();
 
   const genres = ref<IGenre[] | undefined>([]);
   const loadGenres = async (): Promise<void> => {
@@ -48,10 +45,6 @@
   .genre__title {
     margin-bottom: 64px;
   }
-
-  /* .genre__content {
-    margin-bottom: 40px;
-  } */
   
   .genres__list {
     display: flex;
@@ -66,9 +59,5 @@
       justify-content: center;
     }
   }
-  
-  /* @media (max-width: 970px) {
-
-  } */
 
 </style>

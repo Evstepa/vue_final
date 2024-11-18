@@ -99,7 +99,6 @@
   @media (max-width: 1024px) {
     .head__list {
       flex-wrap: wrap;
-      /* justify-content: flex-start; */
       gap: 12px;
     }
   }
